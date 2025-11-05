@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <main>
       <section 
-        className="hero"
+        className="hero hero-section"
         style={{
           backgroundImage: 'url(/Heroachtergrond.png)',
           backgroundSize: 'cover',
@@ -34,73 +34,55 @@ export default function Home() {
           backgroundRepeat: 'no-repeat',
           minHeight: '90vh',
           width: '100%',
-          display: 'flex',
-          alignItems: 'flex-end',
-          justifyContent: 'flex-end',
-          padding: '2rem 4rem',
-          paddingBottom: '4rem',
           position: 'relative'
         }}
       >
-        <button 
-          className="cta-button"
-          onClick={() => {
-            const contactSection = document.getElementById('contact')
-            if (contactSection) {
-              contactSection.scrollIntoView({ behavior: 'smooth' })
-            }
-          }}
-          style={{
-            backgroundColor: '#F1EFE7',
-            color: '#17320B',
-            border: 'none',
-            padding: '1rem 2.5rem',
-            fontSize: '1.2rem',
-            fontWeight: 'normal',
-            fontFamily: 'inherit',
-            cursor: 'pointer',
-            borderRadius: '0',
-            transition: 'all 0.3s ease',
-            zIndex: 10
-          }}
-        >
-          Boeking aanvragen
-        </button>
+        <div className="hero-cta-container">
+          <button 
+            className="cta-button"
+            onClick={() => {
+              const contactSection = document.getElementById('contact')
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' })
+              }
+            }}
+            style={{
+              backgroundColor: '#F1EFE7',
+              color: '#17320B',
+              border: 'none',
+              padding: '1rem 2.5rem',
+              fontSize: '1.2rem',
+              fontWeight: 'normal',
+              fontFamily: 'inherit',
+              cursor: 'pointer',
+              borderRadius: '0',
+              transition: 'all 0.3s ease',
+              zIndex: 10
+            }}
+          >
+            Boeking aanvragen
+          </button>
+        </div>
       </section>
 
       {/* Catering Sectie */}
       <section 
         id="catering"
-        className="section-creme"
+        className="section-creme catering-section"
         style={{
           backgroundColor: '#F1EFE7',
           minHeight: '90vh',
-          width: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          padding: '6rem 4rem'
+          width: '100%'
         }}
       >
-        <div style={{ maxWidth: '1400px', width: '100%' }}>
+        <div className="section-container">
           {/* Top Section */}
-          <div style={{ 
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
-            gap: '5rem',
-            marginBottom: '6rem',
-            alignItems: 'center'
-          }}>
+          <div className="catering-header">
             <div>
               <h2 
-                className="title-animate"
+                className="title-animate section-title"
                 style={{ 
-                  fontSize: '4rem', 
-                  color: '#17320B', 
-                  fontWeight: '300',
-                  letterSpacing: '-0.02em',
-                  lineHeight: '1.2'
+                  color: '#17320B'
                 }}
               >
                 Onze Catering Services
@@ -109,14 +91,9 @@ export default function Home() {
           </div>
 
           {/* Services Grid */}
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
-            gap: '5rem',
-            marginTop: '4rem'
-          }}>
+          <div className="services-grid">
             {/* Service 01 */}
-            <div>
+            <div className="service-item">
               <div style={{
                 marginBottom: '1rem'
               }}>
@@ -134,21 +111,10 @@ export default function Home() {
                   borderBottom: '1px solid rgba(23, 50, 11, 0.3)'
                 }}></div>
               </div>
-              <h4 style={{ 
-                fontSize: '1.6rem', 
-                color: '#17320B', 
-                marginBottom: '1.5rem',
-                fontWeight: 'normal'
-              }}>
+              <h4>
                 Evenementen & Feesten
               </h4>
-              <p style={{ 
-                fontSize: '1.1rem', 
-                color: '#17320B', 
-                lineHeight: '1.8',
-                opacity: 0.75,
-                marginBottom: '2rem'
-              }}>
+              <p>
                 Van intieme verjaardagen tot grootse bruiloften. Wij zorgen voor een culinaire ervaring die uw gasten nooit zullen vergeten. Elk detail wordt zorgvuldig afgestemd op uw wensen en de sfeer van uw feest.
               </p>
               <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
@@ -200,7 +166,7 @@ export default function Home() {
             </div>
 
             {/* Service 02 */}
-            <div>
+            <div className="service-item">
               <div style={{
                 marginBottom: '1rem'
               }}>
@@ -218,21 +184,10 @@ export default function Home() {
                   borderBottom: '1px solid rgba(23, 50, 11, 0.3)'
                 }}></div>
               </div>
-              <h4 style={{ 
-                fontSize: '1.6rem', 
-                color: '#17320B', 
-                marginBottom: '1.5rem',
-                fontWeight: 'normal'
-              }}>
+              <h4>
                 Private Dining
               </h4>
-              <p style={{ 
-                fontSize: '1.1rem', 
-                color: '#17320B', 
-                lineHeight: '1.8',
-                opacity: 0.75,
-                marginBottom: '2rem'
-              }}>
+              <p>
                 Een exclusieve culinaire reis bij u thuis. Geniet van een persoonlijk samengesteld menu in de intimiteit van uw eigen omgeving. Onze chef komt naar u toe voor een onvergetelijke avond.
               </p>
               <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
@@ -284,7 +239,7 @@ export default function Home() {
             </div>
 
             {/* Service 03 */}
-            <div>
+            <div className="service-item">
               <div style={{
                 marginBottom: '1rem'
               }}>
@@ -302,21 +257,10 @@ export default function Home() {
                   borderBottom: '1px solid rgba(23, 50, 11, 0.3)'
                 }}></div>
               </div>
-              <h4 style={{ 
-                fontSize: '1.6rem', 
-                color: '#17320B', 
-                marginBottom: '1.5rem',
-                fontWeight: 'normal'
-              }}>
+              <h4>
                 Bedrijfscatering
               </h4>
-              <p style={{ 
-                fontSize: '1.1rem', 
-                color: '#17320B', 
-                lineHeight: '1.8',
-                opacity: 0.75,
-                marginBottom: '2rem'
-              }}>
+              <p>
                 Professionele catering voor zakelijke bijeenkomsten, conferenties en bedrijfsfeesten. Indruk maken begint bij de smaak. Van lunch tot walking dinner, wij verzorgen het tot in de puntjes.
               </p>
               <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
@@ -373,16 +317,11 @@ export default function Home() {
       {/* Galerij Sectie */}
       <section 
         id="gallerij"
-        className="section-green"
+        className="section-green gallery-section"
         style={{
           backgroundColor: '#17320B',
           minHeight: '90vh',
           width: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          padding: '6rem 4rem',
           position: 'relative',
           overflow: 'hidden'
         }}
@@ -402,16 +341,13 @@ export default function Home() {
           }}
         />
 
-        <div style={{ maxWidth: '1400px', width: '100%', position: 'relative', zIndex: 1 }}>
+        <div className="section-container" style={{ position: 'relative', zIndex: 1 }}>
           {/* Title - Left aligned */}
           <div style={{ textAlign: 'left', marginBottom: '4rem' }}>
             <h2 
-              className="title-animate"
+              className="title-animate section-title"
               style={{ 
-                fontSize: '4rem', 
-                color: '#F1EFE7', 
-                fontWeight: '300',
-                letterSpacing: '0'
+                color: '#F1EFE7'
               }}
             >
               Gallerij
@@ -509,56 +445,42 @@ export default function Home() {
       {/* Over Ons Sectie */}
       <section 
         id="over-ons"
-        className="section-creme"
+        className="section-creme about-section"
         style={{
           backgroundColor: '#F1EFE7',
           minHeight: '90vh',
-          width: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          padding: '6rem 2rem'
+          width: '100%'
         }}
       >
-        <div style={{ 
-          maxWidth: '1400px', 
-          width: '100%',
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(450px, 1fr))',
-          gap: '5rem',
-          alignItems: 'center'
-        }}>
-          <div style={{ 
-            overflow: 'hidden',
-            height: '600px',
-            position: 'relative',
-            border: '1px solid rgba(23, 50, 11, 0.2)'
-          }}>
-            <img 
-              src="/Heroachtergrond.png" 
-              alt="Mats en Thyon"
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover'
-              }}
-            />
-          </div>
-          
-          <div style={{ padding: '2rem' }}>
-            <h2 
-              className="title-animate"
-              style={{ 
-                fontSize: '4rem', 
-                color: '#17320B', 
-                marginBottom: '2.5rem',
-                fontWeight: '300',
-                letterSpacing: '0'
-              }}
-            >
-              Ontmoet Mats en Gag!
-            </h2>
+        <div className="section-container">
+          <div className="about-grid">
+            <div style={{ 
+              overflow: 'hidden',
+              height: '600px',
+              position: 'relative',
+              border: '1px solid rgba(23, 50, 11, 0.2)'
+            }}>
+              <img 
+                src="/Heroachtergrond.png" 
+                alt="Mats en Thyon"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover'
+                }}
+              />
+            </div>
+            
+            <div>
+              <h2 
+                className="title-animate section-title"
+                style={{ 
+                  color: '#17320B', 
+                  marginBottom: '2.5rem'
+                }}
+              >
+                Ontmoet Mats en Gag!
+              </h2>
             <p style={{ 
               fontSize: '1.25rem', 
               color: '#17320B', 
@@ -620,16 +542,11 @@ export default function Home() {
       {/* Contact Sectie */}
       <section 
         id="contact"
-        className="section-green"
+        className="section-green contact-section"
         style={{
           backgroundColor: '#17320B',
           minHeight: '90vh',
           width: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          padding: '4rem 2rem',
           position: 'relative',
           overflow: 'hidden'
         }}
@@ -648,21 +565,13 @@ export default function Home() {
             pointerEvents: 'none'
           }}
         />
-        <div style={{ 
-          maxWidth: '1400px', 
-          width: '100%',
-          position: 'relative',
-          zIndex: 1
-        }}>
+        <div className="section-container" style={{ position: 'relative', zIndex: 1 }}>
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <h2 
-              className="title-animate"
+              className="title-animate section-title"
               style={{ 
-                fontSize: '4rem', 
                 color: '#F1EFE7', 
-                marginBottom: '1rem',
-                fontWeight: '300',
-                letterSpacing: '0'
+                marginBottom: '1rem'
               }}
             >
               Laat ons je wensen weten!
@@ -679,12 +588,7 @@ export default function Home() {
             </p>
           </div>
           
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', 
-            gap: '2.5rem',
-            marginTop: '2rem'
-          }}>
+          <div className="contact-grid">
             {/* Contactgegevens */}
             <div style={{ 
               padding: '2rem',
@@ -700,7 +604,7 @@ export default function Home() {
                 Bereik ons gerust via direct contact
               </h3>
               
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '2rem', paddingBottom: '2rem', borderBottom: '1px solid rgba(241, 239, 231, 0.2)' }}>
+              <div className="contact-details-grid" style={{ marginBottom: '2rem', paddingBottom: '2rem', borderBottom: '1px solid rgba(241, 239, 231, 0.2)' }}>
                 <div>
                   <p style={{ 
                     fontSize: '0.9rem', 
