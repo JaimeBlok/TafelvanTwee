@@ -628,7 +628,7 @@ export default function Home() {
                 opacity: 0.6,
                 fontStyle: 'italic'
               }}>
-                "Goed eten hoeft niet ingewikkeld te zijn. Het draait om smaak, presentatie en de liefde waarmee het wordt bereid."
+                &quot;Goed eten hoeft niet ingewikkeld te zijn. Het draait om smaak, presentatie en de liefde waarmee het wordt bereid.&quot;
               </p>
               <p style={{
                 fontSize: '1rem',
