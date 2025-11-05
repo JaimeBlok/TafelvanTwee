@@ -419,20 +419,9 @@ export default function Home() {
           </div>
           
           {/* Bento Box Style Grid Layout */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(4, 1fr)',
-            gridTemplateRows: 'repeat(3, 200px)',
-            gap: '1.5rem',
-            width: '100%'
-          }}>
+          <div className="gallery-grid">
             {/* Image 1 - Large horizontal */}
-            <div style={{
-              gridColumn: 'span 2',
-              gridRow: 'span 2',
-              border: '1px solid #F1EFE7',
-              overflow: 'hidden'
-            }}>
+            <div className="gallery-item gallery-item-1">
               <img 
                 src="/Heroachtergrond.png" 
                 alt="Gallery 1"
@@ -445,12 +434,7 @@ export default function Home() {
             </div>
 
             {/* Image 2 - Tall right */}
-            <div style={{
-              gridColumn: 'span 2',
-              gridRow: 'span 3',
-              border: '1px solid #F1EFE7',
-              overflow: 'hidden'
-            }}>
+            <div className="gallery-item gallery-item-2">
               <img 
                 src="/Heroachtergrond.png" 
                 alt="Gallery 2"
@@ -463,12 +447,7 @@ export default function Home() {
             </div>
 
             {/* Image 3 - Small square */}
-            <div style={{
-              gridColumn: 'span 1',
-              gridRow: 'span 1',
-              border: '1px solid #F1EFE7',
-              overflow: 'hidden'
-            }}>
+            <div className="gallery-item gallery-item-3">
               <img 
                 src="/Heroachtergrond.png" 
                 alt="Gallery 3"
@@ -481,12 +460,7 @@ export default function Home() {
             </div>
 
             {/* Image 4 - Small square */}
-            <div style={{
-              gridColumn: 'span 1',
-              gridRow: 'span 1',
-              border: '1px solid #F1EFE7',
-              overflow: 'hidden'
-            }}>
+            <div className="gallery-item gallery-item-4">
               <img 
                 src="/Heroachtergrond.png" 
                 alt="Gallery 4"
